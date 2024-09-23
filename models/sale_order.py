@@ -11,7 +11,7 @@ class SaleOrder(models.Model):
 
         res.update(
             {
-                'invoice_date': self.date_order,
+                'invoice_date': fields.Date.context_today(self),
             }
         )
 

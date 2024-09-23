@@ -11,8 +11,12 @@
         <attribute name="invisible">1</attribute>
       </xpath>
 
+      <xpath expr="////button[@id='create_invoice_percentage']" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </xpath>
+
       <xpath expr="//button[@id='create_invoice_percentage']" position="before">
-        <button string="CREAR FACTURA" name="create_invoices_custom" type="object" class="oe_highlight"/>
+        <button string="CREAR FACTURA MARIO" name="create_invoices_custom" type="object" class="oe_highlight"/>
       </xpath>
     </field>
   </record>
