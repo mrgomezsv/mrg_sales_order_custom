@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 {
     'name': "Personalizacion del Pedido de Ventas",
 
@@ -13,7 +13,7 @@
     'website': "https://mrgomezsv.github.io/",
 
     'category': 'Sales',
-    'version': '19.0.1.0.0',
+    'version': '20.0.1.0.0',
 
     # Módulos necesarios para el funcionamiento
     'depends': ['base', 'sale'],
