@@ -13,7 +13,7 @@
     'website': "https://mrgomezsv.github.io/",
 
     'category': 'Sales',
-    'version': '16.0',
+    'version': '19.0.1.0.0',
 
     # Módulos necesarios para el funcionamiento
     'depends': ['base', 'sale'],
@@ -22,4 +22,6 @@
     'data': [
         'views/sale_order.xml',
     ],
+    'installable': True,
+    'license': 'LGPL-3',
 }
