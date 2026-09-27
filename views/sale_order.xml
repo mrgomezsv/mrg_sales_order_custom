@@ -7,16 +7,16 @@
     <field name="inherit_id" ref="sale.view_order_form"/>
     <field name="arch" type="xml">
 
-      <xpath expr="////button[@id='create_invoice']" position="attributes">
+      <xpath expr="//button[@id='create_invoice']" position="attributes">
         <attribute name="invisible">1</attribute>
       </xpath>
 
-      <xpath expr="////button[@id='create_invoice_percentage']" position="attributes">
+      <xpath expr="//button[@id='create_invoice_percentage']" position="attributes">
         <attribute name="invisible">1</attribute>
       </xpath>
 
       <xpath expr="//button[@id='create_invoice_percentage']" position="before">
-        <button string="CREAR FACTURA MARIO" name="create_invoices_custom" type="object" class="oe_highlight"/>
+        <button string="CREAR FACTURA MARIO" name="create_invoices_custom" type="object" class="oe_highlight" invisible="invoice_status != 'to invoice'"/>
       </xpath>
     </field>
   </record>

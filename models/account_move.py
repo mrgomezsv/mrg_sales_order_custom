@@ -9,6 +9,15 @@ class AccountMove(models.Model):
     def action_post(self):
         res = super().action_post()
         source_orders = self.line_ids.sale_line_ids.order_id
-        for picking in source_orders.picking_ids:
-            picking.quantity_done = picking.product_uom_qty
-            picking.button_validate
+        for picking in getattr(source_orders, 'picking_ids', []):
+            try:
+                for move in picking.move_ids:
+                    if hasattr(move, 'quantity'):
+                        move.quantity = move.product_uom_qty
+                    elif hasattr(move, 'quantity_done'):
+                        move.quantity_done = move.product_uom_qty
+                if hasattr(picking, 'button_validate'):
+                    picking.button_validate()
+            except Exception:
+                pass
+        return res
