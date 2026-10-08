@@ -16,7 +16,7 @@
       </xpath>
 
       <xpath expr="//button[@id='create_invoice_percentage']" position="before">
-        <button string="CREAR FACTURA MARIO" name="create_invoices_custom" type="object" class="oe_highlight" invisible="invoice_status != 'to invoice'"/>
+        <button string="Crear Factura Directa" name="create_invoices_custom" type="object" class="oe_highlight" invisible="invoice_status != 'to invoice'"/>
       </xpath>
     </field>
   </record>

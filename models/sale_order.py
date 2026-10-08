@@ -20,3 +20,4 @@ class SaleOrder(models.Model):
     def create_invoices_custom(self):
         for sale in self:
             sale._create_invoices(final=True)
+        return self.action_view_invoice()
